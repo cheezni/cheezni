@@ -5,20 +5,23 @@
 /*gallery stuff*/
 div.gallery {
   margin: 5px;
-  border: 2px solid #504E52;
+  border: 2.5px solid #504E52;
   border-radius: 10px;
   float: left;
   width: 31%;
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 div.gallery:hover {
-  border: 2px solid #504E52;
-  background-color: #FAD6E4;
+  border: 2.5px solid #FAD6E4;
 }
 
 div.gallery img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
 div.desc {
@@ -26,17 +29,11 @@ div.desc {
   text-align: center;
 }
 
-/*rounded img borders*/
-img {
-  border-radius: 10px;
-  padding: 5px;
-}
-
 /*links*/
 a:link, a:visited {
   background-color: #E8E2E6;
   color: #504E52;
-  /*padding: 15px 25px;*/
+  padding: 0px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -108,4 +105,30 @@ body {
   .column {
     width: 100%;
   }
+  
+/*responsive gallery stuff*/
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 }
